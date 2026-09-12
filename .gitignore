@@ -1,2 +1,14 @@
-/data
+# Data
+/data/
 *.csv
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
