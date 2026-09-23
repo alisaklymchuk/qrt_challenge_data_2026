@@ -1,0 +1,30 @@
+data:
+  train_path: data/train.csv
+  test_path: data/test.csv
+
+features:
+  features:
+    - momentum
+    - volatility
+    - zscore
+    - autocorr
+
+  horizons:
+    momentum: 5
+    volatility: 20
+    zscore: 20
+    autocorr: 20
+
+model:
+  regressor: ridge
+  params:
+    alpha: 1.0
+
+cv:
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+
+experiment:
+  name: default
+  seed: 42
