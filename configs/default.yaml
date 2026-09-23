@@ -1,6 +1,7 @@
 data:
-  train_path: data/train.csv
-  test_path: data/test.csv
+  train_path: data/X_train.csv
+  test_path: data/X_test.csv
+  target_path: data/y_train.csv
 
 features:
   features:
@@ -10,10 +11,10 @@ features:
     - autocorr
 
   horizons:
-    momentum: 5
-    volatility: 20
-    zscore: 20
-    autocorr: 20
+    momentum: [3, 5, 10, 15, 20]  # List of horizons like in the notebook
+    volatility: [20]
+    zscore: [20]
+    autocorr: [20]
 
 model:
   regressor: ridge

@@ -5,11 +5,12 @@ import yaml
 class DataConfig:
     train_path: str
     test_path: str
+    target_path: str = None
 
 @dataclass
 class FeatureConfig:
     features: list[str]
-    horizons: dict[str, int]
+    horizons: dict[str, int | list[int]]
 
 @dataclass
 class ModelConfig:
