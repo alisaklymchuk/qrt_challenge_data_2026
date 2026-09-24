@@ -1,0 +1,20 @@
+{
+  "experiment_name": "default",
+  "timestamp": "20260924_161323",
+  "train_accuracy": 0.4851206427958203,
+  "eval_accuracy": 0.4830432101693307,
+  "n_train_samples": 421658,
+  "n_eval_samples": 105415,
+  "n_features": 9,
+  "feature_names": [
+    "ret_vol_momentum_h_3",
+    "ret_vol_momentum_h_5",
+    "ret_vol_momentum_h_10",
+    "ret_vol_momentum_h_15",
+    "ret_vol_momentum_h_20",
+    "ret_vol_volatility_h_20",
+    "ret_vol_zscore_h_20",
+    "ret_vol_autocorr_h_20",
+    "GROUP"
+  ]
+}
