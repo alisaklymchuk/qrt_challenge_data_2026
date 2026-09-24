@@ -10,6 +10,7 @@ class DataConfig:
 @dataclass
 class FeatureConfig:
     features: list[str]
+    columns: list[str]
     horizons: dict[str, int | list[int]]
 
 @dataclass

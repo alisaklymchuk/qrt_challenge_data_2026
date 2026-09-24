@@ -166,6 +166,8 @@ def build_features(df, config):
 
         for h in horizons:
             features.append(apply_feature(df, feature_name, h=h))
+    if hasattr(config, "columns"):
+        features.append(df[config.columns])
 
     return pd.concat(features, axis=1)
 
