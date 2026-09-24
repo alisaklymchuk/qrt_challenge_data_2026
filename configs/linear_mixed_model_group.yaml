@@ -9,17 +9,21 @@ features:
     - volatility
     - zscore
     - autocorr
-    - group
+  
+  columns:
+    - GROUP
 
   horizons:
     momentum: [3, 5, 10, 15, 20]  # List of horizons like in the notebook
     volatility: [20]
     zscore: [20]
     autocorr: [20]
-    group: [1]
 
 model:
-  regressor: linear_mixed_model
+  task: regression
+  model_name: linear_mixed_model
+  params:
+    alpha: 1.0
 
 cv:
   n_splits: 5

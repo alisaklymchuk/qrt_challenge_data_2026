@@ -5,7 +5,7 @@ from sklearn.linear_model import Ridge
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import make_scorer
 import pandas as pd
-from model_utils import add_model, sign_acc_score
+from . import MODEL_REGISTRY, add_model
 
 @add_model("linear_mixed_model")
 def build_linear_mixed_model(X_train, y_train, **params):
