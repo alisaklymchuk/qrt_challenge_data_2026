@@ -17,7 +17,8 @@ features:
     autocorr: [20]
 
 model:
-  regressor: ridge
+  task: regression
+  model_name: ridge
   params:
     alpha: 1.0
 

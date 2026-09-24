@@ -4,19 +4,15 @@ from sklearn.linear_model import Ridge
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import make_scorer
 import pandas as pd
+from . import MODEL_REGISTRY, add_model
+
 
 def sign_acc(y_true, y_pred):
     return ((y_pred >= 0) == (y_true >= 0)).mean()
 
+
 sign_acc_score = make_scorer(sign_acc)
 
-MODEL_REGISTRY = {}
-
-def add_model(name):
-    def decorator(fn):
-        MODEL_REGISTRY[name] = fn
-        return fn
-    return decorator
 
 @add_model("ridge")
 def build_ridge(X_train, y_train, **params):

@@ -1,0 +1,22 @@
+{
+  "experiment_name": "default",
+  "timestamp": "20260924_152227",
+  "train_accuracy": 0.5209814589074558,
+  "eval_accuracy": 0.5224588531043969,
+  "n_train_samples": 421658,
+  "n_eval_samples": 105415,
+  "n_features": 8,
+  "feature_names": [
+    "ret_vol_momentum_h_3",
+    "ret_vol_momentum_h_5",
+    "ret_vol_momentum_h_10",
+    "ret_vol_momentum_h_15",
+    "ret_vol_momentum_h_20",
+    "ret_vol_volatility_h_20",
+    "ret_vol_zscore_h_20",
+    "ret_vol_autocorr_h_20"
+  ],
+  "model_parameters": {
+    "alpha": 0.01
+  }
+}

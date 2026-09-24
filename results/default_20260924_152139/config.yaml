@@ -1,0 +1,36 @@
+!!python/object:src.config.Config
+cv: !!python/object:src.config.CVConfig
+  n_splits: 5
+  random_state: 42
+  shuffle: true
+data: !!python/object:src.config.DataConfig
+  target_path: data/y_train.csv
+  test_path: data/X_test.csv
+  train_path: data/X_train.csv
+experiment: !!python/object:src.config.ExperimentConfig
+  name: default
+  seed: 42
+features: !!python/object:src.config.FeatureConfig
+  features:
+  - momentum
+  - volatility
+  - zscore
+  - autocorr
+  horizons:
+    autocorr:
+    - 20
+    momentum:
+    - 3
+    - 5
+    - 10
+    - 15
+    - 20
+    volatility:
+    - 20
+    zscore:
+    - 20
+model: !!python/object:src.config.ModelConfig
+  model_name: ridge
+  params:
+    alpha: 1.0
+  task: regression
